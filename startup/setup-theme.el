@@ -15,7 +15,7 @@
 (require 'theme-manager)
 ;(color-theme-manoj-dark)
 ;(color-theme-manoj-font-lock)
-(color-theme-scintilla)
+;(color-theme-scintilla)
 
 ;--------------------
 ;; Use font Monaco 10 for Mac OS X -- 
