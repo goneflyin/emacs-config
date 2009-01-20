@@ -67,7 +67,9 @@ P")
 		      (progn
 			(condition-case error-var
 			    (progn
-			      (message "Loading %s..." file)
+;; my own modification to message for easier parsing in *Messages* buffer
+			      (message "*** LOADING %s..." file)
+;;			      (message "Loading %s..." file)
 			      (message "(load-file \"%s\")" file)
 			      (run-hook-with-args 'load-directory-pre-load-file-hooks file)
 			      (if (or t (y-or-n-p (format "load %s? " file)))
@@ -85,7 +87,9 @@ P")
 			      (if (eq system-type 'berkely-unix)
 				  (message "PS: %s" (shell-command-to-string (format "ps  -vp %d" (emacs-pid)))))
 			      (run-hook-with-args 'load-directory-post-load-file-hooks file)
-			      (message "Loading %s... done" file))
+;; my own modification to message for easier parsing in *Messages* buffer
+			      (message "*** COMPLETED %s... done" file))
+;;			      (message "Loading %s... done" file))
 			  (error
 			   (progn
 			     ;; unfortunately, handling it here means we don't get a backtrace!

@@ -62,3 +62,5 @@
      (toolbar ((t (nil))))
      (underline ((nil (:underline nil))))
      (zmacs-region ((t (:background "snow" :foreground "ble")))))))
+
+(add-to-list 'color-themes '(color-theme-twilight \"Twilight\" \"Marcus Crafter\"))
